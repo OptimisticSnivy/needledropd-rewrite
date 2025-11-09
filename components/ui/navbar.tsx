@@ -48,6 +48,8 @@ export default function Navbar() {
 					</div>
 				</div>
 			</NavigationMenu>
+
+
 		</div>
 	);
 }

@@ -25,7 +25,7 @@ export default function MobileNavMenu() {
 				<Button variant="ghost" size="sm"><MenuIcon className="h-4 w-4" />
 				</Button>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent className="sm:hidden md:hidden lg:hidden w-56" align="start">
+			<DropdownMenuContent className="md:hidden lg:hidden w-56" align="start">
 				<DropdownMenuGroup>
 					<DropdownMenuItem>
 						Profile
