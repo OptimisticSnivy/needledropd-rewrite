@@ -1,15 +1,24 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import {
+	InputGroup,
+	InputGroupAddon,
+	InputGroupInput,
+} from "@/components/ui/input-group"
+import { Kbd } from "@/components/ui/kbd"
 import { SearchIcon } from "lucide-react"
 
-export function InputWithButton() {
+export function KbdInputGroup() {
 	return (
-		<div className="flex w-full max-w-sm items-center gap-2">
-			<Input className="hidden md:block lg:block" type="search" placeholder="Search" />
-			<Button type="submit" variant="outline">
-				<SearchIcon />
-			</Button>
+		<div className="flex w-full max-h-1 max-w-xs flex-col gap-6">
+			<InputGroup>
+				<InputGroupInput placeholder="Search..." />
+				<InputGroupAddon>
+					<SearchIcon />
+				</InputGroupAddon>
+				<InputGroupAddon align="inline-end">
+					<Kbd>⌘</Kbd>
+					<Kbd>K</Kbd>
+				</InputGroupAddon>
+			</InputGroup>
 		</div>
 	)
 }
-

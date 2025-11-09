@@ -1,6 +1,5 @@
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
-import { ModeToggle } from "@/components/dark-mode-toggle";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";

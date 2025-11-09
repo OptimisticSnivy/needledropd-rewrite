@@ -28,7 +28,7 @@ export default function MobileNavMenu() {
 			<DropdownMenuContent className="md:hidden lg:hidden w-56" align="start">
 				<DropdownMenuGroup>
 					<DropdownMenuItem>
-						Profile
+						<Link href="/profile">Profile</Link>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						Albums
@@ -45,11 +45,6 @@ export default function MobileNavMenu() {
 				<DropdownMenuSeparator />
 				<DropdownMenuItem>
 					Settings
-				</DropdownMenuItem>
-				<DropdownMenuSeparator />
-				<DropdownMenuItem>
-					Log out
-					<DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>

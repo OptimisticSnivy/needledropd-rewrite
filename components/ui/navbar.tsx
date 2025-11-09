@@ -12,8 +12,9 @@ import {
 } from "@/components/ui/navigation-menu"
 import { MenuIcon } from "lucide-react"
 import { Button } from "./button";
-import { InputWithButton } from "./inputWithButton";
+import { KbdInputGroup } from "./inputWithButton";
 import { useState } from "react";
+import Link from "next/link";
 import MobileNavMenu from "./mobileNavMenu";
 
 
@@ -29,7 +30,7 @@ export default function Navbar() {
 							</NavigationMenuItem>
 							<NavigationMenuItem className="font-extrabold text-base font-mono">needledropd.</NavigationMenuItem>
 							<NavigationMenuItem>
-								<NavigationMenuLink className="hidden md:block lg:block">Profile</NavigationMenuLink>
+								<NavigationMenuLink href="/profile" className="hidden md:block lg:block">Profile</NavigationMenuLink>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
 								<NavigationMenuLink className="hidden md:block lg:block">Artists</NavigationMenuLink>
@@ -43,7 +44,7 @@ export default function Navbar() {
 					</div>
 					<div className="hidden md:block lg:block md:grow-0 md:w-64 lg:grow-0 lg:w-64 ">
 						<NavigationMenuList>
-							<InputWithButton />
+							<KbdInputGroup />
 						</NavigationMenuList>
 					</div>
 				</div>
