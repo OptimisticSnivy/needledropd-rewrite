@@ -1,3 +1,5 @@
+"use client"
+
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -11,6 +13,9 @@ import {
 import { MenuIcon } from "lucide-react"
 import { Button } from "./button";
 import { InputWithButton } from "./inputWithButton";
+import { useState } from "react";
+import MobileNavMenu from "./mobileNavMenu";
+
 
 export default function Navbar() {
 	return (
@@ -19,8 +24,8 @@ export default function Navbar() {
 				<div className="flex">
 					<div className="grow-0 md:grow-0 lg:grow-0">
 						<NavigationMenuList>
-							<NavigationMenuItem className="p-3 md:hidden lg:hidden font-extrabold text-base font-mono">
-								<Button><MenuIcon className="h-4 w-4" /></Button>
+							<NavigationMenuItem className="ml-2 md:hidden lg:hidden font-extrabold text-base font-mono">
+								<MobileNavMenu />
 							</NavigationMenuItem>
 							<NavigationMenuItem className="font-extrabold text-base font-mono">needledropd.</NavigationMenuItem>
 							<NavigationMenuItem>
