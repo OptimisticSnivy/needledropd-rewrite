@@ -30,7 +30,7 @@ export default async function AlbumCard({ ANAME, ARTIST }: { ANAME: string, ARTI
 	return (
 		<Card className='flex flex-col m-3 max-w-md pt-0'>
 			<CardContent className='px-0'>
-				<Image src={imgsrc} alt="Album Cover" width={180} height={180} className="rounded-xl"></Image>
+				<Image src={imgsrc} alt="Album Cover" width={180} height={180} className="rounded-sm"></Image>
 			</CardContent>
 			<CardHeader>
 				<CardTitle>{aname}</CardTitle>
