@@ -20,29 +20,22 @@ export default async function AlbumCard({ ANAME, ARTIST }: { ANAME: string, ARTI
 
 	const response = await fetch(
 		`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${API_KEY}&artist=${ARTIST}&album=${ANAME}&format=json`,
-		// `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${API_KEY}&artist=radiohead&album=kid+a&format=json`,
 	);
+
 	const data = await response.json();
 	imgsrc = data.album.image[3]["#text"];
 	aname = ANAME;
 	artist = ARTIST;
 
 	return (
-		<Card className="mx-auto w-full max-w-sm">
-			<CardHeader>
-				<CardTitle></CardTitle>
-				<CardDescription>
-				</CardDescription>
-				<CardAction>
-				</CardAction>
-			</CardHeader>
-			<CardContent>
-				<div className="flex flex-col gap-6">
-					<Image src={imgsrc} alt="Album Cover" width={500} height={500}></Image>
-				</div>
+		<Card className='flex flex-col m-3 max-w-md pt-0'>
+			<CardContent className='px-0'>
+				<Image src={imgsrc} alt="Album Cover" width={180} height={180} className="rounded-xl"></Image>
 			</CardContent>
-			<CardFooter className="flex-col gap-2">
-			</CardFooter>
+			<CardHeader>
+				<CardTitle>{aname}</CardTitle>
+				<CardDescription>{artist}</CardDescription>
+			</CardHeader>
 		</Card>
 	)
 }

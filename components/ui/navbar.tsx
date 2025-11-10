@@ -30,7 +30,7 @@ export default function Navbar() {
 							</NavigationMenuItem>
 							<NavigationMenuItem className="font-extrabold text-base font-mono">needledropd.</NavigationMenuItem>
 							<NavigationMenuItem>
-								<NavigationMenuLink href="/profile" className="hidden md:block lg:block">Profile</NavigationMenuLink>
+								<NavigationMenuLink href="/profile" className="hidden md:block lg:block">Profile </NavigationMenuLink>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
 								<NavigationMenuLink className="hidden md:block lg:block">Artists</NavigationMenuLink>
