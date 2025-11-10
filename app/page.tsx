@@ -4,7 +4,7 @@ import AlbumCard from "@/components/ui/album-card";
 export default function Home() {
 	return (
 		<div className="flex font-sans">
-			<AlbumCard />
+			<AlbumCard ARTIST="Radiohead" ANAME="Amnesiac" />
 		</div>
 	);
 }
