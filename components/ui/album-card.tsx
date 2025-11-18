@@ -8,10 +8,8 @@ import {
 	CardTitle,
 } from "@/components/ui/card"
 import 'dotenv/config';
+import Link from "next/link";
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 
 export default async function AlbumCard({ ANAME, ARTIST }: { ANAME: string, ARTIST: string }) {
 	const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -28,15 +26,17 @@ export default async function AlbumCard({ ANAME, ARTIST }: { ANAME: string, ARTI
 	artist = ARTIST;
 
 	return (
-		<Card className='flex flex-col m-3 max-w-md pt-0'>
+		<Card className='flex flex-col m-3 max-w-md pt-0 on:hover:border-2'>
 			<CardContent className='px-0'>
-				<Image src={imgsrc} alt="Album Cover" width={180} height={180} className="rounded-sm"></Image>
+				<Link href={`/${artist.toLowerCase()}/${aname.toLowerCase()}`}>
+					<Image src={imgsrc} alt="Album Cover" width={180} height={180} className="rounded-sm"></Image>
+				</Link>
 			</CardContent>
 			<CardHeader>
-				<CardTitle>{aname}</CardTitle>
-				<CardDescription>{artist}</CardDescription>
+				<CardTitle><Link href={`/${artist.toLowerCase()}/${aname.toLowerCase()}`}>{aname}</Link></CardTitle>
+				<CardDescription><Link href={`${artist.toLowerCase()}`}>{artist}</Link></CardDescription>
 			</CardHeader>
-		</Card>
+		</Card >
 	)
 }
 
